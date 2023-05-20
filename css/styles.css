@@ -1,0 +1,89 @@
+:root {
+    --background-clr: rgb(3, 74, 160);
+    --box-clr: rgb(240, 182, 127);
+    --black: rgb(8, 8, 8);
+    --font-clr: rgb(5, 25, 35);
+    --button-hover: rgb(205, 197, 211);
+    --button-clr: rgb(222, 217, 226);
+    --red-clr: red;
+}
+
+body {
+    background-color: var(--background-clr);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background-color: var(--box-clr);
+    box-sizing: border-box;
+    width: 60%;
+    inset: 50%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px var(--black, 0.4);
+    padding: 2rem;
+}
+header {
+    font-weight: bolder;
+    font-size: larger;
+    padding-bottom: 2rem;
+    color: var(--font-clr);
+}
+.each-field {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    align-items: center;
+    font-size: medium;
+    font-weight: lighter;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+.each-field input {
+    border: none;
+    padding: .5rem;
+    border-radius: 10px;
+    width: 14rem;
+}
+.float {
+    float: right;
+    width: 15rem;
+}
+.center {
+    text-align: center;
+    padding: 1rem;
+}
+.button-area {
+    display: flex;
+    justify-content: space-around;
+    margin: 0.5rem;
+}
+.button {
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--button-clr);
+}
+.button:hover {
+    background-color: var(--button-hover);
+}
+
+p {
+    color: var(--red-clr);
+    font-size: x-small;
+    flex-wrap: wrap;
+    display: none;
+}
+
+@media screen and (max-width: 670px) {
+    .container {
+        width: 80%;
+    }
+    .each-field {
+        flex-direction: column;
+    }
+    label {
+        text-align: left;
+    }
+}

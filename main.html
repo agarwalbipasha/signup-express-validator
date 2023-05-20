@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>SignUp Page</title>
+
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header><h1>Sign Up</h1></header>
+      <main>
+        <form action="/" method="POST" name="signup_page">
+          <section class="each-field">
+            <label for="fname">First Name:</label><br />
+            <div class="float">
+              <input type="text" id="fname" name="fname" placeholder="Please enter a valid first name" />
+              </div>
+          </section>
+          <section class="each-field">
+            <label for="lname">Last Name:</label><br />
+            <div class="float">
+              <input type="text" id="lname" name="lname" placeholder="Please enter a valid last name" />
+            </div>
+          </section>
+          <section class="each-field">
+            <label for="email">Email:</label><br />
+            <div class="float">
+              <input type="text" id="email" name="email" placeholder="Please enter a valid email ID" />
+            </div>
+          </section>
+          <section class="each-field">
+            <label for="password">Password:</label><br />
+            <div class="float">
+              <input type="password" id="password" name="password" placeholder="Password should be of atleast 8 charactes including one
+              uppercase alphabet, at least one symbol and one number"/>
+            </div>
+          </section>
+          <section class="each-field">
+            <label for="confirm">Confirm Your Password:</label><br />
+            <div class="float">
+              <input type="password" id="confirm" name="confirm" placeholder="Re-enter the same password" />
+            </div>
+          </section>
+          <section class="center">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox">I agree to the terms & conditions</label>
+          </section>
+          <section class="button-area">
+            <input type="submit" value="Sign Up" class="button" />
+            <input type="reset" value="Cancel" class="button" />
+          </section>
+        </form>
+      </main>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
