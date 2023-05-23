@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     res.status(200).send('All IDs');
 });
 
-router.post('/', [
+router.post('/signup', [
     body('fname')
     .trim()
     .not()
@@ -42,22 +42,23 @@ router.post('/', [
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
     }
+
     const data = new Data({ 
         fname: req.body.fname,
         lname: req.body.lname,
         email: req.body.email,
         password: req.body.password
     });
-    try {
-        const dataToSave = await data.save((err, res1) => {
-            if(err) throw err;
-            res.render('index', { title: 'Sign Up', records: dataToSave});
 
-        });
-        
+    try {
+        const dataToSave = await data.save();
+        res.send(dataToSave);
     } catch (error) {
         res.status(400).send(error.message);
     }
 });
 
 module.exports = router;
+
+
+    
